@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>JavaScript Clock</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Clock</h1>
+        <div class="clock-container">
+            <div class="clock">
+                <div class="hour-hand" id="hourHand"></div>
+                <div class="minute-hand" id="minuteHand"></div>
+                <div class="seconds-hand" id="secondsHand"></div>
+            </div>
+            <div class="digital-clock">
+            <div class="time">
+                <span id="hour"></span>:<span id="minutes"></span><span id="amPmDisplay"></span>
+            </div>
+            <button class="toggle-format-btn" id="toggleFormatBtn">24 Hour</button>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
