@@ -7,170 +7,164 @@
 }
 
 .container {
-    background-color: black;
-    height: 100vh;
-    width: 100%;
-    font-family: 'Quicksand', sans-serif;
+  background-color: black;
+  height: 100vh;
+  width: 100%;
+  font-family: "Quicksand", sans-serif;
 }
 
 .title {
-    font-size: 48px;
-    font-weight: 300;
-    color: white;
-    text-align: center;
-    padding-top: 10px;
+  font-size: 48px;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  padding-top: 10px;
 }
 
 .clock-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 80%;
-    width: 100vw;
-    margin-top: 20px;
-    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  width: 100vw;
+  margin-top: 20px;
 }
 
 .clock {
-    --clock-size: 200px;
-    height: var(--clock-size);
-    width: var(--clock-size);
-    border: 5px solid white;
-    border-radius: 50%;
-    position: relative;
-    margin-bottom: 50px;
+  --clock-size: 200px;
+  height: var(--clock-size);
+  width: var(--clock-size);
+  border: 5px solid white;
+  border-radius: 50%;
+  position: relative;
+  margin-bottom: 50px;
 }
 
 /* The circle in the centre of the clock */
 .clock::after {
-    --circle-size: 7px;
-    content: "";
-    height: var(--circle-size);
-    width: var(--circle-size);
-    background-color: white;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+  --circle-size: 7px;
+  content: "";
+  height: var(--circle-size);
+  width: var(--circle-size);
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .hour-hand {
-    --hour-hand-height: 65px;
-    --hour-hand-width: 6px;
-    height: var(--hour-hand-height);
-    width: var(--hour-hand-width);
-    background-color: #9A00FF;
-    position: absolute;
-    top: calc(50% - var(--hour-hand-height));
-    left: calc(50% - calc(var(--hour-hand-width) / 2));
-    transform-origin: bottom;
-  }
-  
-  .minute-hand {
-    --minute-hand-height: 80px;
-    --minute-hand-width: 4px;
-    height: var(--minute-hand-height);
-    width: var(--minute-hand-width);
-    background-color: #00FFF6;
-    position: absolute;
-    top: calc(50% - var(--minute-hand-height));
-    left: calc(50% - calc(var(--minute-hand-width) / 2));
-    transform-origin: bottom;
-  }
-  
-  .seconds-hand {
-    --seconds-hand-height: 90px;
-    --seconds-hand-width: 2px;
-    height: var(--seconds-hand-height);
-    width: var(--seconds-hand-width);
-    background-color: #FF00FF;
-    position: absolute;
-    top: calc(50% - var(--seconds-hand-height));
-    left: calc(50% - calc(var(--seconds-hand-width) / 2));
-    transform-origin: bottom;
-  }
+  --hour-hand-height: 65px;
+  --hour-hand-width: 6px;
+  height: var(--hour-hand-height);
+  width: var(--hour-hand-width);
+  background-color: #9a00ff;
+  position: absolute;
+  top: calc(50% - var(--hour-hand-height));
+  left: calc(50% - calc(var(--hour-hand-width) / 2));
+  transform-origin: bottom;
+}
 
- .digital-clock {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
+.minute-hand {
+  --minute-hand-height: 80px;
+  --minute-hand-width: 4px;
+  height: var(--minute-hand-height);
+  width: var(--minute-hand-width);
+  background-color: #00fff6;
+  position: absolute;
+  top: calc(50% - var(--minute-hand-height));
+  left: calc(50% - calc(var(--minute-hand-width) / 2));
+  transform-origin: bottom;
+}
 
- } 
+.seconds-hand {
+  --seconds-hand-height: 90px;
+  --seconds-hand-width: 2px;
+  height: var(--seconds-hand-height);
+  width: var(--seconds-hand-width);
+  background-color: #ff00ff;
+  position: absolute;
+  top: calc(50% - var(--seconds-hand-height));
+  left: calc(50% - calc(var(--seconds-hand-width) / 2));
+  transform-origin: bottom;
+}
+
+.digital-clock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .time {
-    color: white;
-    font-size: 48px;
-    font-weight: 300;
+  color: white;
+  font-size: 48px;
+  font-weight: 300;
 }
 
 .toggle-format-btn {
-    border: 1px solid white;
-    background-color: black;
-    color: #00FFF6;
-    height: 45px;
-    width: 125px;
-    font-size: 24px;
-    margin-top: 30px;
-}
-
-.toggle-format-btn:hover {
-    cursor: pointer;
-    background-color: #00FFF6;
-    color: black;
+  border: 1px solid white;
+  background-color: black;
+  color: #00fff6;
+  height: 45px;
+  width: 125px;
+  font-size: 24px;
+  margin-top: 30px;
 }
 
 .hide {
-    display: none;
+  display: none;
+}
+
+/* Only use hover effects if the device supports hover to prevent issues with touchscreens */
+@media (hover: hover) {
+  .toggle-format-btn:hover {
+    cursor: pointer;
+    background-color: #00fff6;
+    color: black;
+  }
 }
 
 /* Small mobiles in landscape */
 @media (orientation: landscape) and (max-height: 450px) {
-
-    .clock-container {
-        flex-direction: row;
-        justify-content: space-around;
-        padding-bottom: 5%;
-    }
-
-
+  .clock-container {
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 5%;
+  }
 }
 
 /* Larger screens */
 @media (min-height: 750px) and (min-width: 450px) {
+  .title {
+    font-size: 64px;
+  }
 
-    .title {
-        font-size: 64px;
-    }
+  .clock {
+    --clock-size: 400px;
+  }
 
-    .clock {
-        --clock-size: 400px;
-    }
+  .clock::after {
+    --circle-size: 15px;
+  }
 
-    .clock::after {
-        --circle-size: 15px;
-      }
-    
-    .hour-hand {
-        --hour-hand-height: 130px;
-        --hour-hand-width: 12px;
-      }
-      
-      .minute-hand {
-        --minute-hand-height: 160px;
-        --minute-hand-width: 8px;
-      }
-      
-      .seconds-hand {
-        --seconds-hand-height: 180px;
-        --seconds-hand-width: 4px;
-      }
+  .hour-hand {
+    --hour-hand-height: 130px;
+    --hour-hand-width: 12px;
+  }
 
-      .time {
+  .minute-hand {
+    --minute-hand-height: 160px;
+    --minute-hand-width: 8px;
+  }
 
-        font-size: 72px;
+  .seconds-hand {
+    --seconds-hand-height: 180px;
+    --seconds-hand-width: 4px;
+  }
 
-    }
-
+  .time {
+    font-size: 72px;
+  }
 }
