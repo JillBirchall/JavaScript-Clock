@@ -8,8 +8,7 @@
 
 .container {
   background-color: black;
-  min-height: 100vh;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   font-family: "Quicksand", sans-serif;
 }
@@ -124,6 +123,13 @@
     cursor: pointer;
     background-color: #00fff6;
     color: black;
+  }
+}
+
+@media (hover: none) {
+  .container {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
   }
 }
 
