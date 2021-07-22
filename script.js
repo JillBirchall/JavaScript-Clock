@@ -33,7 +33,7 @@ function updateDigitalHours() {
   if (is24Hour) {
     hoursDisplay.innerText = digitalHours;
   } else {
-    let amOrPm = hours > 12 ? "pm" : "am";
+    let amOrPm = hours >= 12 ? "pm" : "am";
     let formattedHours = convertHours(digitalHours);
     hoursDisplay.innerText = formattedHours;
     amPmDisplay.innerText = amOrPm;
